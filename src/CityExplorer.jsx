@@ -21,7 +21,7 @@ const CityExplorer = () => {
       const regionURL = cityIsInUS(city) ? 'https://us1.locationiq.com/v1/search.php' : 'https://eu1.locationiq.com/v1/search.php';
       const response = await axios.get(regionURL, {
         params: {
-          key: process.env.City_Explorer,
+          key: process.env.REACT_APP_CITY_EXPLORER,
           q: city,
           format: 'json'
         }
