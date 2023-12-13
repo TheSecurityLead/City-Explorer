@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; 
 import axios from 'axios';
 import { Form, Button, Card } from 'react-bootstrap';
+import ErrorAlert from './ErrorAlert'; 
 
 const CityExplorer = () => {
   const [city, setCity] = useState('');
@@ -60,7 +61,7 @@ const CityExplorer = () => {
         </Button>
       </Form>
   
-      {error && <p className="text-danger">{error}</p>}
+      <ErrorAlert message={error} /> {/* Use ErrorAlert for displaying error messages */}
   
       {locationInfo && (
         <>
@@ -80,5 +81,6 @@ const CityExplorer = () => {
       )}
     </div>
   );
-          };
+};
+
 export default CityExplorer;
