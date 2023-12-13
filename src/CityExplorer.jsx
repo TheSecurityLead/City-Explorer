@@ -12,10 +12,6 @@ const CityExplorer = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const fetchMapImage = async (lat, lon) => {
-    // Function to fetch map image, if necessary.
-    // You can also move this logic to LocationInfo component.
-  };
 const cityIsInUS = (cityName) => {
   const usCities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose'];
   return usCities.includes(cityName);
