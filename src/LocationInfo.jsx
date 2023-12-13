@@ -6,7 +6,7 @@ const LocationInfo = ({ locationInfo }) => {
 
   useEffect(() => {
     if (locationInfo) {
-      const newMapUrl = `https://maps.locationiq.com/v3/staticmap?key=YOUR_API_KEY&center=${locationInfo.lat},${locationInfo.lon}&zoom=12`;
+      const newMapUrl = `https://maps.locationiq.com/v3/staticmap?key=${import.meta.env.VITE_APIKEY_CITY_EXPLORER}&center=${locationInfo.lat},${locationInfo.lon}&zoom=12`;
       setMapUrl(newMapUrl);
     }
   }, [locationInfo]);
