@@ -16,12 +16,12 @@ const CityExplorer = () => {
     event.preventDefault();
     setLoading(true);
     setError('');
-
+console.log(import.meta.env.VITE_APIKEY_CITY_EXPLORER)
     try {
       const regionURL = cityIsInUS(city) ? 'https://us1.locationiq.com/v1/search.php' : 'https://eu1.locationiq.com/v1/search.php';
       const response = await axios.get(regionURL, {
         params: {
-          key: 'pk.d412df6ffd1d3aaabcda549b559fe485',
+          key:import.meta.env.VITE_APIKEY_CITY_EXPLORER,
           q: city,
           format: 'json'
         }
